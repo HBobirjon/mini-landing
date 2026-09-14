@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shaxsiy portfolio va aloqa sahifasi." />
+  <title>Bobirjon — Portfolio</title>
+  <style>
+    :root{--ink:#eaf0ff;--muted:#aebad5;--violet:#8b5cf6;--cyan:#22d3ee;--night:#090b18;--card:rgba(20,24,48,.7)}
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--night);line-height:1.55}
+    .glow{position:fixed;z-index:-1;width:46vw;height:46vw;border-radius:50%;filter:blur(90px);opacity:.24}.one{background:var(--violet);top:-18vw;left:-15vw}.two{background:var(--cyan);right:-16vw;bottom:-21vw}
+    main{max-width:1120px;margin:auto;padding:24px}.nav{display:flex;justify-content:space-between;align-items:center;padding:8px 0}.brand{font-weight:800;letter-spacing:.04em}.dot{color:var(--cyan)}.nav a,.cta{color:var(--ink);text-decoration:none;font-weight:700}
+    .hero{min-height:78vh;display:grid;place-items:center;text-align:center;padding:70px 0}.eyebrow{color:var(--cyan);font-weight:700;letter-spacing:.13em;text-transform:uppercase;font-size:.76rem}.hero h1{font-size:clamp(3rem,9vw,7rem);line-height:.98;letter-spacing:-.07em;margin:18px 0}.hero h1 span{background:linear-gradient(110deg,var(--cyan),#c4b5fd);-webkit-background-clip:text;color:transparent}.lead{max-width:620px;margin:0 auto 30px;color:var(--muted);font-size:clamp(1rem,2vw,1.22rem)}
+    .cta{display:inline-flex;gap:9px;align-items:center;padding:14px 21px;border-radius:999px;background:linear-gradient(110deg,var(--violet),#4f46e5);box-shadow:0 12px 35px #5b21b655;transition:transform .2s}.cta:hover{transform:translateY(-3px)}
+    .section{padding:54px 0}.section h2{font-size:clamp(1.8rem,4vw,3rem);letter-spacing:-.04em;margin:0 0 16px}.section>p{color:var(--muted);max-width:620px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}.card{background:var(--card);border:1px solid #ffffff17;border-radius:18px;padding:24px;backdrop-filter:blur(15px)}.number{font-size:1.8rem;font-weight:800;color:var(--cyan)}.card h3{margin:9px 0}.card p{color:var(--muted);margin:0}
+    .contact{margin:38px 0 16px;padding:42px;border-radius:25px;background:linear-gradient(120deg,#312e81,#0f4c5c);display:flex;align-items:center;justify-content:space-between;gap:24px}.contact h2{margin:0}.contact p{margin:8px 0 0;color:#dbeafe}.outline{border:1px solid #ffffff55;background:#ffffff12}.footer{padding:28px 0;color:var(--muted);font-size:.9rem}
+    @media(max-width:700px){main{padding:18px}.grid{grid-template-columns:1fr}.contact{padding:28px;display:block}.contact .cta{margin-top:20px}.hero{min-height:70vh}.nav a{font-size:.9rem}}
+  </style>
+</head>
+<body>
+  <div class="glow one"></div><div class="glow two"></div>
+  <main>
+    <nav class="nav"><div class="brand">BOBIRJON<span class="dot">.</span></div><a href="#contact">Bog‘lanish</a></nav>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Developer · Builder · Learner</div>
+        <h1>G‘oyalarni <span>raqamli</span><br/>tajribaga aylantiraman.</h1>
+        <p class="lead">Men zamonaviy, tez va foydalanuvchiga qulay web ilovalar yaratishga qiziqaman.</p>
+        <a class="cta" href="#contact">Birga ishlaymiz <span>→</span></a>
+      </div>
+    </section>
+    <section class="section" id="about">
+      <div class="eyebrow">Qisqacha</div>
+      <h2>Toza kod. Aniq natija.</h2>
+      <p>Bu landing sahifa GitHub Pages’da joylashgan. U istalgan qurilmada ochiladi va alohida hosting talab qilmaydi.</p>
+      <div class="grid">
+        <article class="card"><div class="number">01</div><h3>Web development</h3><p>Responsive va zamonaviy interfeyslar.</p></article>
+        <article class="card"><div class="number">02</div><h3>Backend</h3><p>Ishonchli API va servislar yaratish.</p></article>
+        <article class="card"><div class="number">03</div><h3>O‘sish</h3><p>Doimiy o‘rganish va tajriba qilish.</p></article>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <div><h2>Yangi loyiha bormi?</h2><p>G‘oyangizni muhokama qilish uchun yozing.</p></div>
+      <a class="cta outline" href="mailto:hello@example.com">Email yuborish</a>
+    </section>
+    <footer class="footer">© <span id="year"></span> Bobirjon. GitHub Pages bilan yaratilgan.</footer>
+  </main>
+  <script>document.getElementById("year").textContent=new Date().getFullYear()</script>
+</body>
+</html>
